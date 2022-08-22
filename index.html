@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
     <title>Todoist - Todo App</title>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,16 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Custom CSS File -->
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="loaded">
-    <!-- Main Container -->
+
+  <body>
     <div class="container">
       <main class="main">
         <article class="app-box">
-          <!-- Header -->
           <header class="header">
             <div>
               <h1 class="h1 header-title">My Day</h1>
@@ -118,7 +116,6 @@
             </div>
           </header>
 
-          <!-- Main -->
           <div class="title-wrapper" data-welcome-note>
             <img
               src="./assets/images/calender-image.svg"
@@ -142,7 +139,7 @@
               name="task"
               aria-label="Add task"
               maxlength="100"
-              placeholder="Try typing anything"
+              placeholder="Try typing 'Jogging 20min at morning'"
               class="input-field"
               data-task-input
             />
@@ -165,7 +162,6 @@
           </div>
         </article>
 
-        <!-- App Info Modal -->
         <div class="app-info" data-info-modal>
           <div class="modal">
             <h2 class="modal-title">App info</h2>
@@ -207,7 +203,10 @@
       </main>
     </div>
 
-    <!-- Ion Icon Link -->
+    <!-- JS File -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Ion Icons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -216,8 +215,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <!-- Custom JS File -->
-    <script src="assets/js/main.js"></script>
   </body>
 </html>

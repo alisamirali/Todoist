@@ -1,6 +1,7 @@
 "use strict";
 
-/* Select Elements */
+// select all DOM elements
+
 const headerTime = document.querySelector("[data-header-time]");
 const menuTogglers = document.querySelectorAll("[data-menu-toggler]");
 const menu = document.querySelector("[data-menu]");
@@ -10,14 +11,13 @@ const welcomeNote = document.querySelector("[data-welcome-note]");
 const taskList = document.querySelector("[data-task-list]");
 const taskInput = document.querySelector("[data-task-input]");
 const modal = document.querySelector("[data-info-modal]");
-
 let taskItem = {};
 let taskRemover = {};
 
-/* Store Current Date */
+// store current date from build-in date object
 const date = new Date();
 
-/* Import Task Complete Sound */
+// import task complete sound
 const taskCompleteSound = new Audio("./assets/sounds/task-complete.mp3");
 
 /**
@@ -41,7 +41,7 @@ const getWeekDayName = function (dayNumber) {
     case 5:
       return "Friday";
     case 6:
-      return "Saturday";
+      return "Satureday";
     default:
       return "Not a valid day";
   }
@@ -84,12 +84,12 @@ const getMonthName = function (monthNumber) {
   }
 };
 
-/* Store Weekday Name, Month Name & Month Day Number */
+// store weekday name, month name & month-of-day number
 const weekDayName = getWeekDayName(date.getDay());
 const monthName = getMonthName(date.getMonth());
 const monthOfDay = date.getDate();
 
-/* Update HeaderTime Date */
+// update headerTime date
 headerTime.textContent = `${weekDayName}, ${monthName} ${monthOfDay}`;
 
 /**
@@ -126,18 +126,18 @@ const taskItemNode = function (taskText) {
   createTaskItem.setAttribute("data-task-item", "");
 
   createTaskItem.innerHTML = `
-    
-      <button class="item-icon" data-task-remove="complete">
-        <span class="check-icon"></span>
-      </button>
   
-      <p class="item-text">${taskText}</p>
-  
-      <button class="item-action-btn" aria-label="Remove task" data-task-remove>
-        <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
-      </button>
-  
-    `;
+    <button class="item-icon" data-task-remove="complete">
+      <span class="check-icon"></span>
+    </button>
+
+    <p class="item-text">${taskText}</p>
+
+    <button class="item-action-btn" aria-label="Remove task" data-task-remove>
+      <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+    </button>
+
+  `;
 
   return createTaskItem;
 };
@@ -151,8 +151,8 @@ const taskItemNode = function (taskText) {
 const taskInputValidation = function (taskIsValid) {
   if (taskIsValid) {
     /**
-     * If There Is An Existing Task
-     * Then The New Task Will Be Added Before It
+     * if there is an existing task
+     * then the new task will be added before it
      */
     if (taskList.childElementCount > 0) {
       taskList.insertBefore(taskItemNode(taskInput.value), taskItem[0]);
@@ -160,13 +160,13 @@ const taskInputValidation = function (taskIsValid) {
       taskList.appendChild(taskItemNode(taskInput.value));
     }
 
-    // After Adding Task On TaskList, Input Field Should Be Empty
+    // after adding task on taskList, input field should be empty
     taskInput.value = "";
 
-    // Hide The Welcome Note
+    // hide the welcome note
     welcomeNote.classList.add("hide");
 
-    // Update TaskItem DOM Selection
+    // update taskItem DOM selection
     taskItem = document.querySelectorAll("[data-task-item]");
     taskRemover = document.querySelectorAll("[data-task-remove]");
   } else {
