@@ -47,6 +47,7 @@
 
 }
 
+
 *,
 *::before,
 *::after {
@@ -133,6 +134,7 @@ body.loaded {
   outline-offset: 2px;
 }
 
+
 .container {
   padding-inline: 20px;
 }
@@ -155,6 +157,7 @@ body.loaded {
 .h2 {
   font-size: var(--fs-3);
 }
+
 
 .app-box {
   position: relative;
@@ -183,7 +186,7 @@ body.loaded {
 
 .menu-btn {
   color: var(--white-1);
-  font-size: 24px;
+  font-size: 16px;
   padding: 6px;
   border-radius: var(--radius-5);
 }
@@ -283,6 +286,7 @@ body.loaded {
   color: var(--eerie-black);
   font-size: var(--fs-4);
 }
+
 
 .title-wrapper {
   position: absolute;
@@ -511,6 +515,7 @@ body.loaded {
   display: block;
 }
 
+
 .app-info {
   position: fixed;
   top: 0;
@@ -598,6 +603,7 @@ body.loaded {
   box-shadow: none;
 }
 
+
 @media (min-width: 550px) {
 
   :root {
@@ -622,7 +628,6 @@ body.loaded {
 
 }
 
-
 @media (min-width: 768px) {
 
   .container {
@@ -636,7 +641,6 @@ body.loaded {
     padding: 25px;
     border-radius: var(--radius-10);
   }
-
 
   .task-list {
     max-height: calc(100vh - 250px);
