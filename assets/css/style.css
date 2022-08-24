@@ -315,7 +315,7 @@ body.loaded {
 
 .task-list {
   margin-block: 20px;
-  max-height: calc(100vh - 200px);
+  /* max-height: calc(100vh - 200px); */
   padding-inline-end: 4px;
   margin-inline-end: -4px;
   overflow-y: auto;
@@ -449,7 +449,7 @@ body.loaded {
 
 .input-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   left: 0;
   right: 0;
 }
@@ -643,7 +643,7 @@ body.loaded {
   }
 
   .task-list {
-    max-height: calc(100vh - 250px);
+    /* max-height: calc(100vh - 250px); */
   }
 
   .input-wrapper {
